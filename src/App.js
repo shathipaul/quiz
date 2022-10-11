@@ -41,7 +41,7 @@ function App() {
       path: '*', 
       element: <div>4o4</div>
     }
-
+  
   ])
   return (
     <div className="App">

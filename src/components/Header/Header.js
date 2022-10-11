@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png';
-import img from '../../images/quiz.jpg';
+
 
 
 const Header = () => {
     return (
-        <div>
-            <nav className="flex justify-between items-center h-14 bg-slate-400" >
+        <div className=''>
+            <nav className="container flex justify-between items-center h-14 my-2 " >
                 <div>
-                    <img className="h-14" src={logo} alt="" />
+                    <img className="h-14 ml-16" src={logo} alt="" />
                 </div>
-                <div className=" text-white mr-5">
-                <Link to= '/'>Home</Link>
-                <Link to= '/chart'>Chart</Link>
+                <div className=" text-blue-900 font-bold text-lg mr-5">
+                <Link className='mr-5' to= '/'>Home</Link>
+                <Link className='mr-5' to= '/chart'>Chart</Link>
                 <Link to= '/blog'>Blog</Link>
                 </div>
             </nav>
