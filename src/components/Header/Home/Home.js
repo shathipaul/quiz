@@ -1,12 +1,10 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Quiz from '../../Quiz/Quiz';
 
 const Home = () => {
     const quizzes = useLoaderData();
     return (
-        <div className='flex justify-evenly my-5'>
-            
+        <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 m-5'>
             {
                 quizzes.data.map(quiz => <Quiz
                 key={quiz.id}
