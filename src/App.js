@@ -5,12 +5,16 @@ import Chart from './components/Chart/Chart';
 import Home from './components/Header/Home/Home';
 import QuizDetail from './components/QuizDetail/QuizDetail';
 import Main from './layouts/Main';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
@@ -37,15 +41,12 @@ function App() {
       ]
       
     },
-    {
-      path: '*', 
-      element: <div>4o4</div>
-    }
-  
+    
   ])
   return (
     <div className="App">
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer />
     </div>
   );
 }
