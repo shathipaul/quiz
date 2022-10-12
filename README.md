@@ -4,7 +4,7 @@ Quicky Quiz
 
 ## Live Link:
 
-Netlify:
+Netlify: https://statuesque-flan-b09eb7.netlify.app/
 
 
 
