@@ -7,7 +7,7 @@ import logo from '../../images/logo.png';
 const Header = () => {
     return (
         <div className=''>
-            <nav className="container flex justify-between items-center h-14 my-2 " >
+            <nav className="flex justify-between items-center h-14 my-2 shadow-lg" >
                 <div>
                     <img className="h-14 ml-16" src={logo} alt="" />
                 </div>

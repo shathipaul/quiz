@@ -5,7 +5,7 @@ import Chart from './components/Chart/Chart';
 import Home from './components/Header/Home/Home';
 import QuizDetail from './components/QuizDetail/QuizDetail';
 import Main from './layouts/Main';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 

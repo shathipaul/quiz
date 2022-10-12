@@ -24,7 +24,7 @@ const Question = ({questionD}) => {
             <EyeIcon onClick={() => handleEye(correctAnswer)} className="h-6 w-6 text-blue-900 m-auto"></EyeIcon>
             
             {
-                options.map(option => <p onClick={() => handleOption(option)} className='decoration-0'><input type="radio" />{option}</p>)
+                options.map(option => <p onClick={() => handleOption(option)} className='p-2'><input type="radio" />{option}</p>)
             }
             </div>
             

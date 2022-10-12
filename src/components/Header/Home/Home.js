@@ -6,9 +6,9 @@ const Home = () => {
     const quizzes = useLoaderData();
     return (
         <div className='bg-blue-50'>
-            <div className='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 '>
             <div>
-            <img className='w-6/12 m-auto border border-blue-900' src={img} alt="" />
+            <img className='w-6/12 m-auto border-2 rounded border-blue-900' src={img} alt="" />
             </div>
             <div className='w-9/12 m-auto'>
             <h2 className='text-2xl font-bold text-blue-700 mb-5'>Welcome to Quicky Quiz</h2>
