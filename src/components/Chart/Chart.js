@@ -1,23 +1,31 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
+import { useLoaderData } from 'react-router-dom'
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 
-const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}, ...];
-
-const renderLineChart = (
-  <LineChart width={600} height={300} data={data}>
-    <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-    <CartesianGrid stroke="#ccc" />
-    <XAxis dataKey="name" />
-    <YAxis />
-  </LineChart>
-);
 
 const Chart = () => {
+  const chartData = useLoaderData();
+
+  const data = chartData.data;
+  
+
     return (
         <div>
             <h2 className='text-2xl font-bold text-blue-700 mb-5'>Chart</h2>
-            <div>
-            </div>
+            <BarChart width={530} height={250} data={data}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="total">
+            {data.map((cd) => (
+              <Cell cursor="pointer" fill={"#1746A2"} key={`cell-${cd}`} />
+            ))}
+          </Bar>
+                </BarChart>
+            
+            
         </div>
     );
 };

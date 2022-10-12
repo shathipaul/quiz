@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div className='bg-blue-50'>
-            <h2 className='text-2xl font-bold text-blue-700 mb-5'>Blog</h2>
+            <h2 className='text-2xl font-bold text-blue-700 mb-5'>Frequently Asked Questions</h2>
             <div className='w-4/5 m-auto'>
             <div className='border-2 border-blue-900 rounded mb-5'>
                <h3 className='text-xl font-bold text-blue-700'>What is the purpose of react?</h3> <hr />
