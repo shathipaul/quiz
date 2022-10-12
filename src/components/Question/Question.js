@@ -12,7 +12,7 @@ const Question = ({questionD}) => {
             <EyeIcon className="h-6 w-6 text-blue-900 m-auto"></EyeIcon>
             
             {
-                options.map(option => <li>{option}</li>)
+                options.map(option => <li className='decoration-0'><input type="radio" />{option}</li>)
             }
             </div>
             
