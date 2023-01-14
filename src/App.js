@@ -1,12 +1,11 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import Blog from './components/Blog/Blog';
 import Chart from './components/Chart/Chart';
 import Home from './components/Header/Home/Home';
 import QuizDetail from './components/QuizDetail/QuizDetail';
 import Main from './layouts/Main';
 import { ToastContainer } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
@@ -18,36 +17,32 @@ function App() {
       children: [
         {
           path: '/',
-          loader: async () =>{
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Home></Home>
         },
         {
-          path:'/:quizId',
-          loader: async ({params}) =>{
+          path: '/:quizId',
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
           },
-          element:<QuizDetail></QuizDetail>
+          element: <QuizDetail></QuizDetail>
         },
         {
           path: 'chart',
-          loader: async () =>{
+          loader: async () => {
             return fetch('https://openapi.programming-hero.com/api/quiz')
           },
           element: <Chart></Chart>
-        },
-        {
-          path: 'blog',
-          element: <Blog></Blog>
         }
       ]
-      
+
     },
-    
+
   ])
   return (
-    <div className="App">
+    <div>
       <RouterProvider router={router}></RouterProvider>
       <ToastContainer />
     </div>
